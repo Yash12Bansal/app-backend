@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+}
+
+body{
+    overflow-x: hidden;    
+}
+.container{
+    position: inherit;
+    width: 100%;
+}
+.navigation{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background: #2A2C32;
+    ;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.navigation.active{
+    width: 60px;
+}
+
+.navigation ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+}
+
+.navigation ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+}
+
+.navigation ul li:hover
+{
+    background: #03a9f4;
+}
+
+.navigation ul li:nth-child(1){
+    margin-bottom: 20px;
+}
+
+.navigation ul li:nth-child(1):hover{
+    background: transparent;
+}
+.navigation .dash{
+    position: relative;
+    width: 426px;
+    height: 95px;
+    left: -13px;
+    /* background: #FFFFFF; */
+    border-radius: 10px;
+    /* transform: matrix(-1, 0, 0, 1, 0, 0); */
+    top: 260px;
+    /* background-color: white; */
+}
+
+.navigation .chat{
+    position: relative;
+    width: 451px;
+    height: 100px;
+    left: 413px;
+    top: 86px;
+    background: #FFFFFF;
+    /* border-radius: 10px;
+    transform: matrix(-1, 0, 0, 1, 0, 0); */
+}
+
+.navigation ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: white;
+}
+
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+
+.navigation ul li a .icon .fa{
+    color: #fff;
+    font-size: 24px;
+}
+
+.navigation ul li a .title{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+}
+
+.main{
+    position: absolute;
+    /* width : calc(100%-300px); */
+    left: 300px;
+    width: 77%;
+    min-height: 100vh;
+    background: #f5f5f5;
+    transition: 0.5s;
+}
+
+.main.active{
+    /* width : calc(100%-60px); */
+    width: 95.75%;
+    left: 60px;
+}
+
+.main .topbar{
+    width: 100%;
+    background: white;
+    height: 60px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.toggle{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    /* background: #f00; */
+    cursor: pointer;
+}
+
+.toggle::before{
+    content:  '\f0c9';
+    font-family: fontAwesome;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+    font-size: 24px;
+    text-align: center;
+    color: #111;
+}
+.search{
+    position: relative;
+    width: 200px;
+    margin: 0 10px;    
+}
+.search label{
+    position: relative;
+    width: 100%;
+}
+.search label input{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    padding: 5px 20px;
+    padding-left: 35px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.search label .fa{
+    position: absolute;
+    left: 15px;
+    top: 4px;
+}
+
+.user{
+    position: relative;
+    min-width: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.user img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.msg .fa{
+    position: absolute;
+    left: 85%;
+    top: 3%;
+    opacity: 80%;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.cardBox{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 20px;
+}
+
+.cardBox .card{
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.cardBox .card .numbers{
+    position: relative;
+    font-size: 2em;
+    font-weight: 500;
+}
+
+.cardBox .card .cardName{
+    color: #999;
+}
+
+.cardBox .card .iconBox{
+    font-size: 2em;
+    color: #03a9f4;
+}
+
+.details{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+.details .recentOrders{
+    position: relative;
+    display: grid;
+    min-height: 530px;
+    background: #fff;
+    padding: 20px;
+}
+
+.cardHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.cardHeader h2{
+    font-weight: 600;
+}
+.btn{
+    position: relative;
+    padding: 5px 10px;
+    background: #03a9f4;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 7px;
+}
